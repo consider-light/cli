@@ -1,0 +1,59 @@
+{
+  "targets": [
+    {
+      "name": "百度搜索",
+      "type": "http",
+      "address": "https://www.baidu.com",
+      "expected_status": 200
+    },
+    {
+      "name": "网易首页",
+      "type": "http",
+      "address": "https://www.163.com",
+      "expected_status": 200
+    },
+    {
+      "name": "GitHub",
+      "type": "http",
+      "address": "https://github.com",
+      "expected_status": 200,
+      "retry_count": 1
+    },
+    {
+      "name": "MySQL服务",
+      "type": "tcp",
+      "address": "localhost:3306"
+    },
+    {
+      "name": "SSH服务",
+      "type": "tcp",
+      "address": "localhost:22"
+    },
+    {
+      "name": "无效服务",
+      "type": "http",
+      "address": "https://not-exist-domain-123.com",
+      "expected_status": 200,
+      "retry_count" : 3
+    },
+    {
+      "name": "B站API",
+      "type": "http",
+      "address": "https://api.bilibili.com/x/web-interface/nav",
+      "expected_status": 200
+    },
+    {
+      "name": "Raw文本文件",
+      "type": "http",
+      "address": "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt",
+      "expected_status": 200,
+      "contains": "Go"
+    },
+    {
+      "name": "慢速响应模拟",
+      "type": "http",
+      "address": "https://httpbin.org/delay/5",
+      "expected_status": 200
+    }
+  ]
+}
